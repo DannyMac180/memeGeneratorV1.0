@@ -21,22 +21,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FOV-A0-Y4T">
-                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
-                                <items>
-                                    <barButtonItem systemItem="camera" id="72G-eA-MXW">
-                                        <connections>
-                                            <action selector="pickImageFromCamera:" destination="BYZ-38-t0r" id="h1o-LW-315"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="aYv-Mw-pPO"/>
-                                    <barButtonItem title="Album" id="a5Z-ne-9wB">
-                                        <connections>
-                                            <action selector="pickImageFromAlbum:" destination="BYZ-38-t0r" id="V4h-ce-Pud"/>
-                                        </connections>
-                                    </barButtonItem>
-                                </items>
-                            </toolbar>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NyP-tS-06c">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <items>
@@ -53,17 +37,39 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FOV-A0-Y4T">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="camera" id="72G-eA-MXW">
+                                        <connections>
+                                            <action selector="presentImageFromCamera:" destination="BYZ-38-t0r" id="63B-GK-gsZ"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="aYv-Mw-pPO"/>
+                                    <barButtonItem title="Album" id="a5Z-ne-9wB">
+                                        <connections>
+                                            <action selector="pickImageFromAlbum:" destination="BYZ-38-t0r" id="V4h-ce-Pud"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VNy-ua-uR0">
                                 <rect key="frame" x="0.0" y="64" width="375" height="558"/>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rcr-tt-Po8">
-                                <rect key="frame" x="0.0" y="123" width="375" height="17"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rcr-tt-Po8">
+                                <rect key="frame" x="0.0" y="69" width="375" height="93"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="93" id="izG-s7-E2d"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8vh-fs-gaC">
-                                <rect key="frame" x="0.0" y="524" width="375" height="17"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8vh-fs-gaC">
+                                <rect key="frame" x="0.0" y="578" width="375" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="CUa-28-ovi"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
@@ -71,28 +77,28 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="8vh-fs-gaC" firstAttribute="leading" secondItem="FOV-A0-Y4T" secondAttribute="leading" id="7P7-xX-gbk"/>
-                            <constraint firstItem="FOV-A0-Y4T" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="944-gc-jTn"/>
-                            <constraint firstItem="8vh-fs-gaC" firstAttribute="trailing" secondItem="Rcr-tt-Po8" secondAttribute="trailing" id="9Yg-jA-4AS"/>
-                            <constraint firstItem="Rcr-tt-Po8" firstAttribute="top" secondItem="NyP-tS-06c" secondAttribute="bottom" constant="59" id="DKU-g5-4e4"/>
-                            <constraint firstItem="8vh-fs-gaC" firstAttribute="trailing" secondItem="VNy-ua-uR0" secondAttribute="trailing" id="LAI-29-OuG"/>
-                            <constraint firstItem="8vh-fs-gaC" firstAttribute="leading" secondItem="VNy-ua-uR0" secondAttribute="leading" id="OSV-4b-egF"/>
-                            <constraint firstAttribute="trailing" secondItem="FOV-A0-Y4T" secondAttribute="trailing" id="Of6-aX-EWX"/>
-                            <constraint firstItem="VNy-ua-uR0" firstAttribute="top" secondItem="NyP-tS-06c" secondAttribute="bottom" id="Pid-F6-KuU"/>
-                            <constraint firstItem="FOV-A0-Y4T" firstAttribute="top" secondItem="8vh-fs-gaC" secondAttribute="bottom" constant="82" id="UWs-MC-SnJ"/>
-                            <constraint firstItem="8vh-fs-gaC" firstAttribute="trailing" secondItem="FOV-A0-Y4T" secondAttribute="trailing" id="XCA-w0-FRn"/>
-                            <constraint firstItem="NyP-tS-06c" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Zyf-ks-Qfb"/>
-                            <constraint firstItem="Rcr-tt-Po8" firstAttribute="trailing" secondItem="NyP-tS-06c" secondAttribute="trailing" id="dOj-M4-zcj"/>
-                            <constraint firstItem="Rcr-tt-Po8" firstAttribute="leading" secondItem="NyP-tS-06c" secondAttribute="leading" id="hxc-Di-ae7"/>
-                            <constraint firstItem="8vh-fs-gaC" firstAttribute="leading" secondItem="Rcr-tt-Po8" secondAttribute="leading" id="lAM-OO-Bnh"/>
-                            <constraint firstItem="FOV-A0-Y4T" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="nWa-iW-l2w"/>
-                            <constraint firstItem="FOV-A0-Y4T" firstAttribute="top" secondItem="VNy-ua-uR0" secondAttribute="bottom" constant="1" id="t1r-Vy-OeN"/>
+                            <constraint firstItem="NyP-tS-06c" firstAttribute="trailing" secondItem="Rcr-tt-Po8" secondAttribute="trailing" id="0sh-xk-tzf"/>
+                            <constraint firstItem="8vh-fs-gaC" firstAttribute="leading" secondItem="FOV-A0-Y4T" secondAttribute="leading" id="CDR-31-nKh"/>
+                            <constraint firstAttribute="trailing" secondItem="NyP-tS-06c" secondAttribute="trailing" id="GHH-wu-nK4"/>
+                            <constraint firstItem="8vh-fs-gaC" firstAttribute="trailing" secondItem="Rcr-tt-Po8" secondAttribute="trailing" id="GJh-NE-C9h"/>
+                            <constraint firstItem="8vh-fs-gaC" firstAttribute="leading" secondItem="VNy-ua-uR0" secondAttribute="leading" id="GkD-Fe-qZL"/>
+                            <constraint firstItem="NyP-tS-06c" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="IZd-ye-Cxk"/>
+                            <constraint firstItem="NyP-tS-06c" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="LCL-cg-VJC"/>
+                            <constraint firstItem="8vh-fs-gaC" firstAttribute="trailing" secondItem="FOV-A0-Y4T" secondAttribute="trailing" id="axU-MM-chf"/>
+                            <constraint firstItem="FOV-A0-Y4T" firstAttribute="top" secondItem="8vh-fs-gaC" secondAttribute="bottom" constant="10" id="kix-ym-J42"/>
+                            <constraint firstItem="VNy-ua-uR0" firstAttribute="trailing" secondItem="Rcr-tt-Po8" secondAttribute="trailing" id="mof-Lx-kv8"/>
+                            <constraint firstItem="FOV-A0-Y4T" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="nQ8-O1-pu9"/>
+                            <constraint firstItem="FOV-A0-Y4T" firstAttribute="top" secondItem="VNy-ua-uR0" secondAttribute="bottom" constant="1" id="oNu-hS-FQj"/>
+                            <constraint firstItem="8vh-fs-gaC" firstAttribute="leading" secondItem="Rcr-tt-Po8" secondAttribute="leading" id="oUa-Si-qpB"/>
+                            <constraint firstItem="VNy-ua-uR0" firstAttribute="top" secondItem="NyP-tS-06c" secondAttribute="bottom" id="qfR-YV-ssH"/>
+                            <constraint firstItem="Rcr-tt-Po8" firstAttribute="top" secondItem="NyP-tS-06c" secondAttribute="bottom" constant="5" id="rXx-jI-u9Q"/>
+                            <constraint firstItem="NyP-tS-06c" firstAttribute="leading" secondItem="Rcr-tt-Po8" secondAttribute="leading" id="vkH-ac-1vy"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="bottomTextField" destination="8vh-fs-gaC" id="Hpl-WI-IvH"/>
                         <outlet property="bottomToolbar" destination="FOV-A0-Y4T" id="4WH-Y4-a3o"/>
-                        <outlet property="cameraButton" destination="72G-eA-MXW" id="Ild-yA-wg1"/>
+                        <outlet property="cameraButton" destination="72G-eA-MXW" id="ah6-L6-zh8"/>
                         <outlet property="memeImage" destination="VNy-ua-uR0" id="MDT-Go-z0g"/>
                         <outlet property="shareButton" destination="JLv-gG-dXL" id="Snb-Np-e8Z"/>
                         <outlet property="topTextField" destination="Rcr-tt-Po8" id="qaW-lF-sM1"/>
