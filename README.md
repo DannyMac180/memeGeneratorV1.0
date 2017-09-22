@@ -1,7 +1,7 @@
 # memeGeneratorV1.0
 Udacity's iOS Nanodegree MemeGenerator 1.0
 
-This was the second project app for Udacity's iOS Nanodegree. It was meant to familiarize the students with the basics of using UIKit, implementing the UI components that are commonly present.
+This was the second project app for Udacity's iOS Nanodegree. It was meant to familiarize the students with the basics of using UIKit, implementing the UI components that are commonly present in iOS apps.
 
 What did I learn how to do?
 
